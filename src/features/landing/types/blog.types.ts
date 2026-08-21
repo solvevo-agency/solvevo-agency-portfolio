@@ -6,7 +6,7 @@ export interface Blog {
   content: string
   coverImage: string
   tags: string[]
-  readTime: number // minutes
+  readTime: number
   featured: boolean
   publishedAt: string
 }
