@@ -1,0 +1,58 @@
+import type { Review } from "../types/review.types"
+
+export const reviews: Review[] = [
+  {
+    id: "1",
+    name: "Sarah Mitchell",
+    designation: "Founder",
+    company: "Nova Retail",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80",
+    rating: 5,
+    review: "Solvevo delivered our store ahead of schedule and the code quality was excellent. Communication was clear at every step.",
+  },
+  {
+    id: "2",
+    name: "James Carter",
+    designation: "Product Manager",
+    company: "Fintrack Inc.",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80",
+    rating: 5,
+    review: "They understood our requirements quickly and turned around a polished dashboard that our users genuinely enjoy using.",
+  },
+  {
+    id: "3",
+    name: "Priya Nair",
+    designation: "CTO",
+    company: "Healthbridge",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80",
+    rating: 4.5,
+    review: "Professional, responsive, and technically strong. Solvevo handled a complex integration without missing a beat.",
+  },
+  {
+    id: "4",
+    name: "Daniel Osei",
+    designation: "Operations Lead",
+    company: "Cargoo Logistics",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80",
+    rating: 5,
+    review: "Our fleet tracking system works flawlessly. The team was easy to work with and open to feedback throughout.",
+  },
+  {
+    id: "5",
+    name: "Emily Chen",
+    designation: "Founder",
+    company: "EduSpark",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&h=150&q=80",
+    rating: 4.5,
+    review: "Great attention to detail on the UI and the backend has been rock solid since launch.",
+  },
+  {
+    id: "6",
+    name: "Michael Torres",
+    designation: "Marketing Director",
+    company: "Realty Hub",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80",
+    rating: 5,
+    review: "Solvevo took our vague idea and turned it into a real product. Highly recommend for any startup.",
+  },
+]
