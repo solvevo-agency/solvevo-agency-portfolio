@@ -1,5 +1,11 @@
 import { BlogsView } from "@/features/dashboard/components/blogs/blogs-view"
+import { Suspense } from "react"
 
 export default function DashboardBlogsPage() {
-  return <BlogsView />
+  return (
+    <Suspense fallback={<div>Loading blogs...</div>}>
+      <BlogsView />
+    </Suspense>
+  )
 }
+

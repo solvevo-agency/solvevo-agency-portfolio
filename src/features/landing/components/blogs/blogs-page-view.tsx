@@ -1,34 +1,36 @@
-"use client"
-import { useState } from "react"
-import { motion } from "motion/react"
-import { blogs } from "../../static-data/blogs.data"
-import { BlogCard } from "./blog-card"
-import { Badge } from "@/components/ui/badge"
+"use client";
+import { useState } from "react";
+import { motion } from "motion/react";
+import { blogs } from "../../static-data/blogs.data";
+import { BlogCard } from "./blog-card";
+import { Badge } from "@/components/ui/badge";
 
 export function BlogsPageView() {
-  const [selectedTag, setSelectedTag] = useState<string | null>(null)
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
   // Extract unique tags across all blogs
-  const allTags = Array.from(
-    new Set(blogs.flatMap((blog) => blog.tags))
-  )
+  const allTags = Array.from(new Set(blogs.flatMap((blog) => blog.tags)));
 
   // Filter blogs based on selected tag
   const filteredBlogs = selectedTag
     ? blogs.filter((blog) => blog.tags.includes(selectedTag))
-    : blogs
+    : blogs;
 
   return (
-    <div className="section-padding-x section-padding-y min-h-[70vh]">
+    <div className="section-padding-x py-8 lg:py-12 min-h-[70vh]">
       <div className="max-w-6xl mx-auto">
         {/* Page Header */}
         <div className="max-w-2xl mb-12">
-          <span className="text-sm font-semibold uppercase tracking-wider text-primary">Resources</span>
+          <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+            Resources
+          </span>
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl text-foreground mt-2">
             Our Articles
           </h1>
           <p className="text-muted-foreground mt-4 leading-relaxed">
-            Read our thoughts on frontend design patterns, backend structure, database migrations, animations, and how we build software that ships.
+            Read our thoughts on frontend design patterns, backend structure,
+            database migrations, animations, and how we build software that
+            ships.
           </p>
         </div>
 
@@ -69,10 +71,12 @@ export function BlogsPageView() {
           </div>
         ) : (
           <div className="text-center py-12 border rounded-xl bg-card">
-            <p className="text-muted-foreground text-sm">No articles found in this category.</p>
+            <p className="text-muted-foreground text-sm">
+              No articles found in this category.
+            </p>
           </div>
         )}
       </div>
     </div>
-  )
+  );
 }

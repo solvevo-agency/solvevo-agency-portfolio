@@ -54,13 +54,6 @@ export function ProjectsView() {
   const [status, setStatus] = useState<"published" | "draft">("draft")
   const [tags, setTags] = useState("")
 
-  // Auto-open modal if URL query has ?new=true
-  useEffect(() => {
-    if (searchParams.get("new") === "true") {
-      openAddModal()
-    }
-  }, [searchParams])
-
   const openAddModal = () => {
     setEditingProject(null)
     setTitle("")
@@ -72,6 +65,13 @@ export function ProjectsView() {
     setTags("")
     setIsFormOpen(true)
   }
+
+  // Auto-open modal if URL query has ?new=true
+  useEffect(() => {
+    if (searchParams.get("new") === "true") {
+      openAddModal()
+    }
+  }, [searchParams])
 
   const openEditModal = (project: DashboardProject) => {
     setEditingProject(project)

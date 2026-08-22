@@ -50,13 +50,6 @@ export function BlogsView() {
   const [category, setCategory] = useState("")
   const [status, setStatus] = useState<"published" | "draft">("draft")
 
-  // Auto-open modal if URL query has ?new=true
-  useEffect(() => {
-    if (searchParams.get("new") === "true") {
-      openAddModal()
-    }
-  }, [searchParams])
-
   const openAddModal = () => {
     setEditingBlog(null)
     setTitle("")
@@ -65,6 +58,13 @@ export function BlogsView() {
     setStatus("draft")
     setIsFormOpen(true)
   }
+
+  // Auto-open modal if URL query has ?new=true
+  useEffect(() => {
+    if (searchParams.get("new") === "true") {
+      openAddModal()
+    }
+  }, [searchParams])
 
   const openEditModal = (blog: DashboardBlog) => {
     setEditingBlog(blog)

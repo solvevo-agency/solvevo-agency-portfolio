@@ -1,23 +1,27 @@
-"use client"
-import Link from "next/link"
-import { motion } from "motion/react"
-import { projects } from "../../static-data/projects.data"
-import { ProjectCard } from "./project-card"
-import { buttonVariants } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+"use client";
+import Link from "next/link";
+import { motion } from "motion/react";
+import { projects } from "../../static-data/projects.data";
+import { ProjectCard } from "./project-card";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export function ProjectsSection() {
   // Show exactly six cards
-  const displayProjects = projects.slice(0, 6)
+  const displayProjects = projects.slice(0, 6);
 
   return (
-    <section id="projects" className="section-padding-x section-padding-y bg-muted/10 border-t">
+    <section
+      id="projects"
+      className="section-padding-x section-padding-y bg-muted/10 border-t"
+    >
       <div className="text-center max-w-2xl mx-auto mb-16">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
           Our Featured Projects
         </h2>
         <p className="text-muted-foreground mt-4">
-          Explore a selection of our latest client work, built using modern web stacks and fine-tuned for performance.
+          Explore a selection of our latest client work, built using modern web
+          stacks and fine-tuned for performance.
         </p>
       </div>
 
@@ -42,12 +46,12 @@ export function ProjectsSection() {
           href="/projects"
           className={cn(
             buttonVariants({ variant: "outline", size: "lg" }),
-            "transition-all hover:scale-[1.02] active:scale-[0.98]"
+            "transition-all hover:scale-[1.02] active:scale-[0.98]",
           )}
         >
           View More Projects
         </Link>
       </div>
     </section>
-  )
+  );
 }

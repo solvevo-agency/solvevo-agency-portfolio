@@ -1,7 +1,7 @@
-"use client"
-import Image from "next/image"
-import { motion } from "motion/react"
-import type { Project } from "../../types/project.types"
+"use client";
+import Image from "next/image";
+import { motion } from "motion/react";
+import type { Project } from "../../types/project.types";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -9,7 +9,7 @@ export function ProjectCard({ project }: { project: Project }) {
       href={project.liveUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative block aspect-[3/2] overflow-hidden rounded-xl border bg-card shadow-sm cursor-pointer"
+      className="group relative block aspect-3/2 overflow-hidden rounded-xl border bg-card shadow-sm cursor-pointer"
       initial="rest"
       whileHover="hover"
       animate="rest"
@@ -34,7 +34,10 @@ export function ProjectCard({ project }: { project: Project }) {
       >
         <div className="flex flex-wrap gap-2 mb-3">
           {project.tags.map((tag) => (
-            <span key={tag} className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-white/20">
+            <span
+              key={tag}
+              className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-white/20"
+            >
               {tag}
             </span>
           ))}
@@ -43,10 +46,10 @@ export function ProjectCard({ project }: { project: Project }) {
         <p className="text-sm text-white/80 mt-1 line-clamp-2 leading-relaxed">
           {project.description}
         </p>
-        <span className="mt-4 text-xs font-semibold underline underline-offset-4 tracking-wide text-primary-foreground hover:text-white/100 flex items-center gap-1">
+        <span className="mt-4 text-xs font-semibold underline underline-offset-4 tracking-wide text-primary-foreground hover:text-white flex items-center gap-1">
           Visit live site →
         </span>
       </motion.div>
     </motion.a>
-  )
+  );
 }
