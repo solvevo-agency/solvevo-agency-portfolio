@@ -1,6 +1,6 @@
 export interface Service {
   id: string
-  icon: string // lucide-react icon name
+  icon: string
   title: string
   description: string
 }

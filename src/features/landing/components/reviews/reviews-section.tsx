@@ -1,13 +1,13 @@
-"use client"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination } from "swiper/modules"
-import { reviews } from "../../static-data/reviews.data"
-import { ReviewCard } from "./review-card"
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import { reviews } from "../../static-data/reviews.data";
+import { ReviewCard } from "./review-card";
 
 // Import Swiper styles
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export function ReviewsSection() {
   return (
@@ -17,7 +17,8 @@ export function ReviewsSection() {
           What Our Clients Say
         </h2>
         <p className="text-muted-foreground mt-4">
-          Read reviews from founders and product leads who worked with Solvevo to build their core software.
+          Read reviews from founders and product leads who worked with Solvevo
+          to build their core software.
         </p>
       </div>
 
@@ -42,5 +43,5 @@ export function ReviewsSection() {
         </Swiper>
       </div>
     </section>
-  )
+  );
 }

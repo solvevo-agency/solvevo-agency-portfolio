@@ -125,8 +125,8 @@ body {
   padding-right: 16px;
 }
 .section-padding-y {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -135,8 +135,8 @@ body {
     padding-right: 48px;
   }
   .section-padding-y {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 44px;
+    padding-bottom: 44px;
   }
 }
 
@@ -146,7 +146,7 @@ body {
     padding-right: 120px;
   }
   .section-padding-y {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }

@@ -7,5 +7,5 @@ export interface Project {
   tags: string[]
   liveUrl: string
   featured: boolean
-  completedAt: string // ISO date
+  completedAt: string
 }

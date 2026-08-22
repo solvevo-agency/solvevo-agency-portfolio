@@ -1,12 +1,12 @@
-"use client"
-import Image from "next/image"
-import { faqs } from "../../static-data/faq.data"
+"use client";
+import Image from "next/image";
+import { faqs } from "../../static-data/faq.data";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/accordion";
 
 export function FaqSection() {
   return (
@@ -18,9 +18,11 @@ export function FaqSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-muted-foreground">
-            Got questions about how we work? Here are answers to some of our most common inquiries. If you don&apos;t see your question here, feel free to contact us below.
+            Got questions about how we work? Here are answers to some of our
+            most common inquiries. If you don&apos;t see your question here,
+            feel free to contact us below.
           </p>
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border bg-card">
+          <div className="relative aspect-4/3 w-full overflow-hidden rounded-xl border bg-card">
             <Image
               src="https://images.unsplash.com/photo-1556761175-b813d53a962e?auto=format&fit=crop&w=800&q=80"
               alt="People collaborating on software designs"
@@ -48,5 +50,5 @@ export function FaqSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
