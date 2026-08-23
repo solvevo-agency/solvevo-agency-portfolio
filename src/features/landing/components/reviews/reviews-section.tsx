@@ -1,13 +1,11 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { reviews } from "../../static-data/reviews.data";
 import { ReviewCard } from "./review-card";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 export function ReviewsSection() {
   return (
@@ -24,19 +22,18 @@ export function ReviewsSection() {
 
       <div className="max-w-6xl mx-auto px-4">
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Autoplay]}
           spaceBetween={24}
-          slidesPerView={1}
-          pagination={{ clickable: true, dynamicBullets: true }}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-            1280: { slidesPerView: 4 },
+          slidesPerView={3}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
           }}
-          className="pb-12"
+          loop={true}
+          className="pb-4"
         >
           {reviews.map((review) => (
-            <SwiperSlide key={review.id} className="h-auto">
+            <SwiperSlide key={review.id} className="!h-auto">
               <ReviewCard review={review} />
             </SwiperSlide>
           ))}

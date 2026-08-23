@@ -1,10 +1,10 @@
 import type { Service } from "../types/service.types"
 
 export const services: Service[] = [
-  { id: "1", icon: "Code2", title: "Web Development", description: "Fast, scalable websites and web apps built with Next.js, React, and TypeScript." },
-  { id: "2", icon: "Smartphone", title: "Mobile App Development", description: "Cross-platform mobile apps that feel native on both iOS and Android." },
-  { id: "3", icon: "Palette", title: "UI/UX Design", description: "User-centered interface design, wireframes, and prototypes that convert." },
-  { id: "4", icon: "Server", title: "Backend & API Development", description: "Robust APIs and backend systems built with Node.js, PostgreSQL, and Prisma." },
-  { id: "5", icon: "Cloud", title: "Cloud & DevOps", description: "Deployment pipelines, CI/CD, and infrastructure that scales with your product." },
-  { id: "6", icon: "Sparkles", title: "AI Integration", description: "AI-powered features — chatbots, automation, and RAG-based search — added to your product." },
+  { id: "1", icon: "Lightbulb", title: "Product Strategy & Design", description: "Turn an idea or business problem into a clear, buildable product. We help shape your product before development — defining the right features, user flows, business logic, and experience so you don't waste time building the wrong thing." },
+  { id: "2", icon: "Globe", title: "Web & Mobile Products", description: "Build software your customers and team can actually use to grow the business. From customer-facing web apps and mobile products to internal platforms and business portals, we build reliable software designed around real business goals — not just screens and features." },
+  { id: "3", icon: "Workflow", title: "Business Systems & Automation", description: "Replace repetitive work with software that works for you. We connect your business processes, APIs, databases, and third-party tools to automate repetitive operations, reduce manual work, and help your team spend more time on higher-value work." },
+  { id: "4", icon: "BrainCircuit", title: "AI-Powered Solutions", description: "Put AI to work where it can create real business value. We integrate AI agents, intelligent workflows, RAG-based knowledge systems, chatbots, and automation into existing products and business processes — with a focus on practical outcomes, not AI for the sake of AI." },
+  { id: "5", icon: "Server", title: "Infrastructure & Product Delivery", description: "Take your product from local development to a reliable production system. We handle deployment, cloud infrastructure, CI/CD, monitoring, security, and the technical foundation needed to run and scale your software reliably." },
+  { id: "6", icon: "Rocket", title: "Ongoing Product Growth", description: "Launch is the beginning — not the end. We can continue improving your product after launch through new features, performance improvements, automation, maintenance, technical support, and data-driven iteration as your business grows." },
 ]
