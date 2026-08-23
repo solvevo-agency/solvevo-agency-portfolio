@@ -7,10 +7,10 @@ export function ServicesSection() {
     <section id="services" className="section-padding-x section-padding-y">
       <div className="text-center max-w-2xl mx-auto mb-16">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-          What We Do Best
+          Build Software That Moves Your Business Forward
         </h2>
         <p className="text-muted-foreground mt-4">
-          From pixel-perfect frontends to complex backends and automated AI pipelines, we deliver end-to-end excellence.
+          From idea to launch and beyond — we design, build, automate, and support software that helps businesses operate better, serve customers, and grow.
         </p>
       </div>
 
