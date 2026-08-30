@@ -23,6 +23,6 @@ jobs:
             cd ${{ secrets.VPS_DEPLOY_PATH }}
             git fetch
             git reset --hard origin/main
-            npm ci --omit=dev
+            npm ci
             npm run build
             pm2 reload solvevo --update-env
