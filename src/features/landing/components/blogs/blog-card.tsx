@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
+
 import { ArrowRight } from "lucide-react";
 import type { Blog } from "../../types/blog.types";
 

@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link"
-import { FolderKanban, Newspaper, Mail, TrendingUp, Clock, ArrowUpRight, Sparkles, MessageSquare, Plus, ChevronRight } from "lucide-react"
+import { FolderKanban, Newspaper, Mail, TrendingUp, Clock, Sparkles, MessageSquare, Plus, ChevronRight } from "lucide-react"
 import { dashboardProjects } from "../../static-data/projects.data"
 import { dashboardBlogs } from "../../static-data/blogs.data"
 import { contactMessages } from "../../static-data/messages.data"
