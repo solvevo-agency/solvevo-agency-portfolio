@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { HeroGallery } from "./hero-gallery";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
@@ -13,6 +14,8 @@ export function HeroSection() {
   useGSAP(
     () => {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+      // Only animate the left content, as the gallery has its own internal animations
       tl.fromTo(
         ".hero-title",
         { opacity: 0, y: 30 },
@@ -81,16 +84,8 @@ export function HeroSection() {
       </div>
 
       {/* Right side: image */}
-      <div className="hero-image relative flex justify-center items-center">
-        <div className="absolute inset-0 bg-primary/5 rounded-2xl filter blur-3xl -z-10" />
-        <Image
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-          alt="Solvevo team collaborating on software"
-          width={600}
-          height={400}
-          className="rounded-2xl object-cover shadow-2xl border bg-card"
-          priority
-        />
+      <div className="hero-image relative flex justify-center items-center h-full w-full">
+        <HeroGallery />
       </div>
     </section>
   );
