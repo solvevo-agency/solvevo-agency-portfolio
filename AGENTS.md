@@ -168,3 +168,16 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 │       └── store.ts
 └── tsconfig.json
 ```
+
+## Design Guidelines
+
+When implementing new features or UI components, ALWAYS adhere to the following design patterns to maintain a modern, professional, and consistent aesthetic:
+
+1. **Global Variables & Theming**: All core colors and radius variables must be managed globally in `src/app/globals.css`. Do not hardcode specific hex colors or random radius values into individual components.
+2. **Component Reusability**: Use and extend the existing Shadcn UI components (e.g., `src/components/ui/button.tsx`, `input.tsx`) rather than building raw HTML elements. 
+3. **Modern Aesthetics**:
+   - Ensure interactive elements like Buttons have sufficient click areas (e.g., `h-11`, `px-6` for default buttons).
+   - Use micro-interactions (`active:scale-[0.98]`, `transition-all`, smooth hover effects) for better user feedback.
+   - Use bold typography (`font-semibold`) on primary actions.
+   - Ensure inputs and textareas have clear focus rings (`focus-visible:ring-primary/20 focus-visible:border-primary`) and comfortable padding (`h-12`, `px-4 py-3`).
+   - Use subtle shadows (`shadow-sm`) to create depth for cards, inputs, and buttons against dark backgrounds.
