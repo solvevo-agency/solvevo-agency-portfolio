@@ -16,7 +16,7 @@ export function ServicesGrid() {
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {megaMenuServices.map((service, idx) => (
+            {megaMenuServices.map((service) => (
               <div
                 key={service.title}
                 className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border bg-card p-8 shadow-sm transition-all hover:shadow-md hover:-translate-y-1"
@@ -33,7 +33,7 @@ export function ServicesGrid() {
                 </div>
                 <div className="mt-8">
                   <Link href="/#contact" className="inline-flex items-center text-sm font-semibold text-primary hover:underline">
-                    Let's talk <ArrowRight className="ml-1 h-4 w-4" />
+                    Let&apos;s talk <ArrowRight className="ml-1 h-4 w-4" />
                   </Link>
                 </div>
               </div>

@@ -5,7 +5,7 @@ interface DashboardLayoutProps {
   children: React.ReactNode
 }
 
-export function DashboardLayout({ children }: { children: React.ReactNode }) {
+export function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
     <div className="flex min-h-screen bg-background">
       {/* Sidebar - Desktop only */}

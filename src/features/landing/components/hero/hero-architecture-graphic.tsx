@@ -4,7 +4,8 @@ import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import gsap from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import { Database, Server, Code2, MonitorSmartphone, Blocks, CheckCircle } from "lucide-react";
+import { Database, Server, Code2, MonitorSmartphone, CheckCircle } from "lucide-react";
+import Image from "next/image";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(MotionPathPlugin);
@@ -157,10 +158,12 @@ export function HeroArchitectureGraphic() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="absolute w-48 h-48 rounded-full bg-cyan-400/20 blur-3xl"
             />
-            <img
+            <Image
               src="/images/solvevo-hub-3d.png"
               alt="Solvevo Engineering Hub"
-              className="relative z-10 w-44 h-44 object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]"
+              width={176}
+              height={176}
+              className="relative z-10 object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]"
             />
           </motion.div>
 
