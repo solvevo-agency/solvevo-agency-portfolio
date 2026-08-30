@@ -8,6 +8,7 @@ import { landingNavLinks } from "@/config/nav.config";
 import { Logo } from "./logo";
 import { ThemeToggle } from "./theme-toggle";
 import { buttonVariants } from "@/components/ui/button";
+import { ServicesMegaMenu } from "@/features/landing/components/services-nav/mega-menu";
 import {
   Sheet,
   SheetContent,
@@ -34,6 +35,7 @@ export function LandingNavbar() {
 
         {/* Center: Desktop Nav Links */}
         <nav className="hidden md:flex items-center gap-6">
+          <ServicesMegaMenu />
           {landingNavLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -83,6 +85,17 @@ export function LandingNavbar() {
                 </SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-4">
+                <Link
+                  href="/services"
+                  onClick={handleLinkClick}
+                  className={`text-base font-medium py-2 transition-colors hover:text-primary ${
+                    pathname === "/services"
+                      ? "text-primary font-semibold border-l-2 border-primary pl-2"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  Services
+                </Link>
                 {landingNavLinks.map((link) => {
                   const isActive = pathname === link.href;
                   return (

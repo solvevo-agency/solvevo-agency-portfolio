@@ -17,7 +17,7 @@ function AccordionItem({ className, ...props }: AccordionPrimitive.Item.Props) {
   return (
     <AccordionPrimitive.Item
       data-slot="accordion-item"
-      className={cn("not-last:border-b", className)}
+      className={cn("border-b border-border/50 dark:border-white/5 transition-colors hover:border-border dark:hover:border-white/20", className)}
       {...props}
     />
   )
@@ -33,14 +33,13 @@ function AccordionTrigger({
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
         className={cn(
-          "group/accordion-trigger relative flex flex-1 items-start justify-between rounded-lg border border-transparent py-2.5 text-left text-sm font-medium transition-all outline-none hover:underline focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:after:border-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 **:data-[slot=accordion-trigger-icon]:ml-auto **:data-[slot=accordion-trigger-icon]:size-4 **:data-[slot=accordion-trigger-icon]:text-muted-foreground",
+          "group/accordion-trigger relative flex flex-1 items-start justify-between py-5 text-left text-[15px] font-semibold text-foreground dark:text-white/90 transition-all outline-none hover:text-primary dark:hover:text-white focus-visible:text-primary dark:focus-visible:text-white **:data-[slot=accordion-trigger-icon]:ml-auto **:data-[slot=accordion-trigger-icon]:size-5 **:data-[slot=accordion-trigger-icon]:text-muted-foreground dark:**:data-[slot=accordion-trigger-icon]:text-white/40 **:data-[slot=accordion-trigger-icon]:transition-transform group-aria-expanded/accordion-trigger:**:data-[slot=accordion-trigger-icon]:rotate-180 group-aria-expanded/accordion-trigger:text-foreground dark:group-aria-expanded/accordion-trigger:text-white",
           className
         )}
         {...props}
       >
         {children}
-        <ChevronDownIcon data-slot="accordion-trigger-icon" className="pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden" />
-        <ChevronUpIcon data-slot="accordion-trigger-icon" className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline" />
+        <ChevronDownIcon data-slot="accordion-trigger-icon" className="shrink-0 transition-transform duration-300 group-aria-expanded/accordion-trigger:text-foreground dark:group-aria-expanded/accordion-trigger:text-white" />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   )
