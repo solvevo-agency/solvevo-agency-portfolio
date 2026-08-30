@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       # The project uses pnpm natively, so we configure pnpm for the CI build
       - name: Enable Corepack & Install pnpm
