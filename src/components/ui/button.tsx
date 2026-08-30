@@ -4,17 +4,17 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-semibold whitespace-nowrap transition-all duration-200 outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "group/button inline-flex shrink-0 items-center justify-center rounded-full border border-transparent bg-clip-padding text-sm font-semibold whitespace-nowrap transition-all duration-300 outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 hover:-translate-y-0.5",
+        default: "bg-gradient-to-b from-primary to-indigo-600 text-white shadow-[0_2px_10px_rgba(79,70,229,0.2),inset_0_1px_0_rgba(255,255,255,0.25)] hover:from-indigo-400 hover:to-primary hover:shadow-[0_5px_15px_rgba(79,70,229,0.4),inset_0_1px_0_rgba(255,255,255,0.3)] hover:-translate-y-0.5",
         outline:
-          "border-border bg-background shadow-sm hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
+          "border border-white/10 bg-white/[0.02] backdrop-blur-md shadow-sm hover:bg-white/[0.06] hover:border-white/20 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-sm hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
+          "bg-white/10 text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] hover:bg-white/15 hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.2)]",
         ghost:
-          "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
+          "hover:bg-white/5 hover:text-foreground aria-expanded:bg-white/5 aria-expanded:text-foreground dark:hover:bg-white/5",
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90 focus-visible:ring-destructive/20",
         link: "text-primary underline-offset-4 hover:underline",
