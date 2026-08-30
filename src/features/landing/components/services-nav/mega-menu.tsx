@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { ArrowRight } from "lucide-react";
 import { megaMenuServices, megaMenuHiring } from "../../static-data/services-nav.data";
-import { cn } from "@/lib/utils";
+
 
 export function ServicesMegaMenu() {
   return (
