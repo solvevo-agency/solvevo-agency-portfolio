@@ -5,9 +5,9 @@ import { stats } from "../../static-data/stats.data";
 
 export function StatsSection() {
   return (
-    <section className="relative py-16 overflow-hidden">
+    <section className="relative py-16 overflow-hidden bg-[#02040a]">
       {/* Subtle border and ambient background */}
-      <div className="absolute inset-0 border-y border-white/5 bg-gradient-to-b from-[#02040a] via-white/[0.02] to-[#02040a]" />
+      <div className="absolute inset-0 border-y border-white/5 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent" />
       
       {/* Glow behind the stats */}
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-full bg-cyan-500/5 blur-[100px] pointer-events-none" />

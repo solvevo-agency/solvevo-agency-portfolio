@@ -10,7 +10,7 @@ export function ServicesSection() {
       {/* Ambient background glows */}
       <div className="absolute inset-0 bg-[#02040a] -z-20" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-indigo-500/10 blur-[120px] -z-10 rounded-full pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[400px] bg-cyan-500/5 blur-[100px] -z-10 rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[400px] bg-primary/5 blur-[100px] -z-10 rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
@@ -58,12 +58,12 @@ export function ServicesSection() {
                   <div className="absolute top-8 left-8 w-16 h-16 bg-primary/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
                   {/* Icon */}
-                  <div className="relative mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-cyan-300 shadow-inner group-hover:text-white group-hover:bg-primary/80 group-hover:border-primary group-hover:shadow-[0_0_20px_rgba(79,70,229,0.5)] transition-all duration-500">
+                  <div className="relative mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-primary shadow-inner group-hover:text-white group-hover:bg-primary/80 group-hover:border-primary group-hover:shadow-[0_0_20px_rgba(79,70,229,0.5)] transition-all duration-500">
                     <IconComponent className="h-6 w-6" />
                   </div>
 
                   {/* Content */}
-                  <h3 className="relative text-xl font-bold text-white mb-3 group-hover:text-cyan-200 transition-colors duration-300">
+                  <h3 className="relative text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors duration-300">
                     {service.title}
                   </h3>
                   <p className="relative text-sm text-white/50 leading-relaxed group-hover:text-white/70 transition-colors duration-300">

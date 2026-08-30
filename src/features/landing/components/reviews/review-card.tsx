@@ -35,9 +35,9 @@ export function ReviewCard({ review }: { review: Review }) {
   };
 
   return (
-    <div className="group relative h-full flex flex-col justify-between p-8 bg-white/[0.02] border border-white/[0.05] rounded-3xl backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.04] hover:border-white/10 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] hover:-translate-y-1">
+    <div className="group relative h-full flex flex-col justify-between p-8 bg-card dark:bg-white/[0.02] border border-border/50 dark:border-white/[0.05] rounded-3xl backdrop-blur-sm transition-all duration-300 hover:bg-secondary/20 dark:hover:bg-white/[0.04] hover:border-border dark:hover:border-white/10 hover:shadow-lg dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] hover:-translate-y-1">
       {/* Subtle top edge highlight */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-foreground/10 dark:via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       
       <div className="flex flex-col gap-6 h-full justify-between relative z-10">
         {/* Star Rating */}
@@ -46,13 +46,13 @@ export function ReviewCard({ review }: { review: Review }) {
         </div>
 
         {/* Review Text */}
-        <p className="text-base sm:text-lg italic text-white/70 leading-relaxed font-medium">
+        <p className="text-base sm:text-lg italic text-muted-foreground dark:text-white/70 leading-relaxed font-medium">
           &ldquo;{review.review}&rdquo;
         </p>
 
         {/* Client details */}
-        <div className="flex items-center gap-4 mt-4 pt-6 border-t border-white/5">
-          <div className="relative h-12 w-12 overflow-hidden rounded-full border border-white/10">
+        <div className="flex items-center gap-4 mt-4 pt-6 border-t border-border/50 dark:border-white/5">
+          <div className="relative h-12 w-12 overflow-hidden rounded-full border border-border/50 dark:border-white/10">
             <Image
               src={review.avatar}
               alt={review.name}
@@ -62,12 +62,12 @@ export function ReviewCard({ review }: { review: Review }) {
             />
           </div>
           <div>
-            <h4 className="text-sm font-bold text-white leading-none mb-1.5">
+            <h4 className="text-sm font-bold text-foreground leading-none mb-1.5">
               {review.name}
             </h4>
-            <p className="text-xs text-white/50">
+            <p className="text-xs text-muted-foreground dark:text-white/50">
               {review.designation},{" "}
-              <span className="font-semibold text-cyan-200/80">
+              <span className="font-semibold text-primary dark:text-cyan-200/80">
                 {review.company}
               </span>
             </p>

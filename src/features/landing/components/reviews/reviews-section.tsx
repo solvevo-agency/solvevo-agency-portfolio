@@ -23,7 +23,7 @@ export function ReviewsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-br from-white to-white/60 bg-clip-text text-transparent drop-shadow-sm"
+            className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-br from-foreground to-foreground/70 dark:from-white dark:to-white/60 bg-clip-text text-transparent drop-shadow-sm"
           >
             What Our Partners Say
           </motion.h2>
@@ -68,9 +68,9 @@ export function ReviewsSection() {
             ))}
           </Swiper>
           
-          {/* Edge fade masks for smooth scrolling illusion */}
-          <div className="absolute inset-y-0 left-0 w-8 sm:w-24 bg-gradient-to-r from-[#050505] to-transparent z-10 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-8 sm:w-24 bg-gradient-to-l from-[#050505] to-transparent z-10 pointer-events-none" />
+          {/* Left/Right Fade Edges */}
+          <div className="absolute inset-y-0 left-0 w-8 sm:w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-8 sm:w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
         </motion.div>
       </div>
     </section>

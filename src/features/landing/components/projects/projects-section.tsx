@@ -12,7 +12,7 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="relative py-24 overflow-hidden">
       {/* Ambient background glows */}
-      <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-cyan-500/5 blur-[120px] -z-10 rounded-full pointer-events-none" />
+      <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] -z-10 rounded-full pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-indigo-500/5 blur-[120px] -z-10 rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -24,7 +24,7 @@ export function ProjectsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-br from-white to-white/60 bg-clip-text text-transparent drop-shadow-sm"
+            className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-br from-foreground to-foreground/70 dark:from-white dark:to-white/60 bg-clip-text text-transparent drop-shadow-sm"
           >
             Featured Engineering Work
           </motion.h2>

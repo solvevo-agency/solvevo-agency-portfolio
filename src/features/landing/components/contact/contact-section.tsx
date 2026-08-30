@@ -47,7 +47,7 @@ export function ContactSection() {
           className="flex flex-col gap-8 lg:max-w-md"
         >
           <div>
-            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-br from-white to-white/60 bg-clip-text text-transparent">
+            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-br from-foreground to-foreground/70 dark:from-white dark:to-white/60 bg-clip-text text-transparent">
               Let&apos;s Build Something Great
             </h2>
             <p className="text-lg text-muted-foreground/80 mt-6 leading-relaxed">
@@ -57,43 +57,43 @@ export function ContactSection() {
           </div>
 
           <div className="flex flex-col gap-6 mt-4">
-            <div className="group flex items-center gap-6 p-4 rounded-2xl transition-colors hover:bg-white/[0.02]">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-cyan-400 shadow-inner group-hover:bg-primary/20 group-hover:text-cyan-200 group-hover:border-primary/50 transition-all duration-300">
+            <div className="group flex items-center gap-6 p-4 rounded-2xl transition-colors hover:bg-secondary/30">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary/50 border border-border text-primary shadow-inner group-hover:bg-primary/20 group-hover:text-primary group-hover:border-primary/50 transition-all duration-300">
                 <Mail className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-base font-bold text-white tracking-wide">
+                <h4 className="text-base font-bold text-foreground tracking-wide">
                   Email Us
                 </h4>
-                <p className="text-sm text-white/50 mt-1">
+                <p className="text-sm text-muted-foreground mt-1">
                   hello@solvevo.com
                 </p>
               </div>
             </div>
 
-            <div className="group flex items-center gap-6 p-4 rounded-2xl transition-colors hover:bg-white/[0.02]">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-cyan-400 shadow-inner group-hover:bg-primary/20 group-hover:text-cyan-200 group-hover:border-primary/50 transition-all duration-300">
+            <div className="group flex items-center gap-6 p-4 rounded-2xl transition-colors hover:bg-secondary/30">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary/50 border border-border text-primary shadow-inner group-hover:bg-primary/20 group-hover:text-primary group-hover:border-primary/50 transition-all duration-300">
                 <MapPin className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-base font-bold text-white tracking-wide">
+                <h4 className="text-base font-bold text-foreground tracking-wide">
                   Office Location
                 </h4>
-                <p className="text-sm text-white/50 mt-1">
+                <p className="text-sm text-muted-foreground mt-1">
                   San Francisco, California
                 </p>
               </div>
             </div>
 
-            <div className="group flex items-center gap-6 p-4 rounded-2xl transition-colors hover:bg-white/[0.02]">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-cyan-400 shadow-inner group-hover:bg-primary/20 group-hover:text-cyan-200 group-hover:border-primary/50 transition-all duration-300">
+            <div className="group flex items-center gap-6 p-4 rounded-2xl transition-colors hover:bg-secondary/30">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary/50 border border-border text-primary shadow-inner group-hover:bg-primary/20 group-hover:text-primary group-hover:border-primary/50 transition-all duration-300">
                 <Phone className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-base font-bold text-white tracking-wide">
+                <h4 className="text-base font-bold text-foreground tracking-wide">
                   Call Us
                 </h4>
-                <p className="text-sm text-white/50 mt-1">
+                <p className="text-sm text-muted-foreground mt-1">
                   +1 (555) 019-2834
                 </p>
               </div>
@@ -107,10 +107,10 @@ export function ContactSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="relative rounded-[2.5rem] border border-white/10 bg-[#050505]/80 backdrop-blur-xl p-8 md:p-12 shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+          className="relative rounded-[2.5rem] border border-border/50 dark:border-white/10 bg-card dark:bg-[#050505]/80 backdrop-blur-xl p-8 md:p-12 shadow-lg dark:shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
         >
           {/* Subtle top edge highlight */}
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent z-20 rounded-t-[2.5rem]" />
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-foreground/10 dark:via-white/20 to-transparent z-20 rounded-t-[2.5rem]" />
           
           <form
             onSubmit={(e) => {
@@ -124,7 +124,7 @@ export function ContactSection() {
             <form.Field name="name">
               {(field) => (
                 <div className="space-y-3">
-                  <Label htmlFor="name" className="text-sm font-semibold text-white/80 uppercase tracking-wider">
+                  <Label htmlFor="name" className="text-sm font-semibold text-foreground dark:text-white/80 uppercase tracking-wider">
                     Name
                   </Label>
                   <Input
@@ -134,7 +134,7 @@ export function ContactSection() {
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
                     placeholder="Your name"
-                    className="w-full bg-white/[0.02] border-white/10 text-white placeholder:text-white/20 h-14 rounded-2xl focus-visible:ring-primary focus-visible:border-primary px-5 text-base transition-all"
+                    className="w-full bg-secondary/50 dark:bg-white/[0.02] border-border dark:border-white/10 text-foreground dark:text-white placeholder:text-muted-foreground dark:placeholder:text-white/20 h-14 rounded-2xl focus-visible:ring-primary focus-visible:border-primary px-5 text-base transition-all"
                   />
                   {field.state.meta.errors ? (
                     <p className="text-xs text-red-400 mt-1 font-medium">
@@ -149,7 +149,7 @@ export function ContactSection() {
             <form.Field name="email">
               {(field) => (
                 <div className="space-y-3">
-                  <Label htmlFor="email" className="text-sm font-semibold text-white/80 uppercase tracking-wider">
+                  <Label htmlFor="email" className="text-sm font-semibold text-foreground dark:text-white/80 uppercase tracking-wider">
                     Email
                   </Label>
                   <Input
@@ -160,7 +160,7 @@ export function ContactSection() {
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
                     placeholder="you@example.com"
-                    className="w-full bg-white/[0.02] border-white/10 text-white placeholder:text-white/20 h-14 rounded-2xl focus-visible:ring-primary focus-visible:border-primary px-5 text-base transition-all"
+                    className="w-full bg-secondary/50 dark:bg-white/[0.02] border-border dark:border-white/10 text-foreground dark:text-white placeholder:text-muted-foreground dark:placeholder:text-white/20 h-14 rounded-2xl focus-visible:ring-primary focus-visible:border-primary px-5 text-base transition-all"
                   />
                   {field.state.meta.errors ? (
                     <p className="text-xs text-red-400 mt-1 font-medium">
@@ -175,7 +175,7 @@ export function ContactSection() {
             <form.Field name="message">
               {(field) => (
                 <div className="space-y-3">
-                  <Label htmlFor="message" className="text-sm font-semibold text-white/80 uppercase tracking-wider">
+                  <Label htmlFor="message" className="text-sm font-semibold text-foreground dark:text-white/80 uppercase tracking-wider">
                     Message
                   </Label>
                   <Textarea
@@ -186,7 +186,7 @@ export function ContactSection() {
                     onChange={(e) => field.handleChange(e.target.value)}
                     placeholder="Describe your project, budget, and timeline..."
                     rows={5}
-                    className="w-full resize-none bg-white/[0.02] border-white/10 text-white placeholder:text-white/20 rounded-2xl focus-visible:ring-primary focus-visible:border-primary p-5 text-base transition-all"
+                    className="w-full resize-none bg-secondary/50 dark:bg-white/[0.02] border-border dark:border-white/10 text-foreground dark:text-white placeholder:text-muted-foreground dark:placeholder:text-white/20 rounded-2xl focus-visible:ring-primary focus-visible:border-primary p-5 text-base transition-all"
                   />
                   {field.state.meta.errors ? (
                     <p className="text-xs text-red-400 mt-1 font-medium">

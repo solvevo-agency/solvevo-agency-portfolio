@@ -29,7 +29,7 @@ export function HeroGallery() {
               r={(i + 1) * 35}
               stroke="currentColor"
               strokeWidth={i % 3 === 0 ? "1" : "0.5"}
-              className={i % 3 === 0 ? "text-cyan-500/30" : "text-blue-500/20"}
+              className={i % 3 === 0 ? "text-primary/20" : "text-primary/10"}
               strokeDasharray={i % 2 === 0 ? "4 6" : "none"}
             />
           ))}
@@ -37,7 +37,7 @@ export function HeroGallery() {
       </div>
 
       {/* Deep Background Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-900/20 via-transparent to-transparent z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent z-0 pointer-events-none" />
 
       {/* --- STAGGERED 2x2 GRID --- */}
       <div className="relative z-10 w-full max-w-[700px] grid grid-cols-2 gap-6 sm:gap-10 items-center">
@@ -49,7 +49,7 @@ export function HeroGallery() {
           transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
           className="col-span-1"
         >
-          <div className="relative aspect-[4/3] w-full rounded-[2rem] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.6)] border border-white/10 group">
+          <div className="relative aspect-[4/3] w-full rounded-[2rem] overflow-hidden shadow-xl shadow-black/5 dark:shadow-black/40 border border-border/50 dark:border-white/10 group">
              {/* Subtle top edge highlight */}
              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent z-20" />
              <Image 
@@ -67,12 +67,12 @@ export function HeroGallery() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="col-span-1 flex flex-col justify-center items-center text-center p-8 bg-white/[0.02] border border-white/[0.05] rounded-[2rem] backdrop-blur-sm shadow-xl"
+          className="col-span-1 flex flex-col justify-center items-center text-center p-8 bg-card dark:bg-white/[0.02] border border-border/50 dark:border-white/[0.05] rounded-[2rem] backdrop-blur-sm shadow-sm"
         >
-          <h3 className="text-5xl sm:text-6xl font-extrabold tracking-tight bg-gradient-to-br from-white via-cyan-100 to-cyan-500 bg-clip-text text-transparent drop-shadow-lg">
+          <h3 className="text-5xl sm:text-6xl font-extrabold tracking-tight bg-gradient-to-br from-primary to-primary/80 dark:from-white dark:via-primary/50 dark:to-primary bg-clip-text text-transparent">
             900+
           </h3>
-          <p className="mt-3 text-xs sm:text-sm text-cyan-200/60 font-semibold tracking-[0.1em] uppercase">
+          <p className="mt-3 text-xs sm:text-sm text-muted-foreground dark:text-primary/80 font-semibold tracking-[0.1em] uppercase">
             Tech Professionals
           </p>
         </motion.div>
@@ -82,12 +82,12 @@ export function HeroGallery() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="col-span-1 flex flex-col justify-center items-center text-center p-8 bg-white/[0.02] border border-white/[0.05] rounded-[2rem] backdrop-blur-sm shadow-xl"
+          className="col-span-1 flex flex-col justify-center items-center text-center p-8 bg-card dark:bg-white/[0.02] border border-border/50 dark:border-white/[0.05] rounded-[2rem] backdrop-blur-sm shadow-sm"
         >
-          <h3 className="text-5xl sm:text-6xl font-extrabold tracking-tight bg-gradient-to-br from-white via-cyan-100 to-cyan-500 bg-clip-text text-transparent drop-shadow-lg">
+          <h3 className="text-5xl sm:text-6xl font-extrabold tracking-tight bg-gradient-to-br from-primary to-primary/80 dark:from-white dark:via-primary/50 dark:to-primary bg-clip-text text-transparent">
             36+
           </h3>
-          <p className="mt-3 text-xs sm:text-sm text-cyan-200/60 font-semibold tracking-[0.1em] uppercase">
+          <p className="mt-3 text-xs sm:text-sm text-muted-foreground dark:text-primary/80 font-semibold tracking-[0.1em] uppercase">
             Countries Served
           </p>
         </motion.div>
@@ -99,7 +99,7 @@ export function HeroGallery() {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="col-span-1"
         >
-          <div className="relative aspect-[4/3] w-full rounded-[2rem] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.6)] border border-white/10 group">
+          <div className="relative aspect-[4/3] w-full rounded-[2rem] overflow-hidden shadow-xl shadow-black/5 dark:shadow-black/40 border border-border/50 dark:border-white/10 group">
              {/* Subtle top edge highlight */}
              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent z-20" />
              <Image 
