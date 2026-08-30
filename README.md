@@ -1,41 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Solvevo Agency
 
-## Getting Started
+A modern, high-performance web application and dashboard built for Solvevo Agency. It features a premium design aesthetic, complex micro-interactions, dark/light mode support, and a fully functional internal dashboard.
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework:** [Next.js](https://nextjs.org) (App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) & [Shadcn UI](https://ui.shadcn.com/)
+- **Animations:** [GSAP](https://gsap.com/) & [Framer Motion](https://www.framer.com/motion/)
+- **State Management:** [Redux Toolkit](https://redux-toolkit.js.org/)
+- **Package Manager:** [pnpm](https://pnpm.io/)
+
+## 📂 Folder Structure
+
+This project follows a feature-driven architecture to keep code scalable and maintainable.
+
+```text
+solvevo-agency/
+├── public/                 # Static assets (images, icons, etc.)
+├── src/
+│   ├── app/                # Next.js App Router (Pages & Layouts)
+│   │   ├── (landing)/      # Public landing pages
+│   │   └── dashboard/      # Protected dashboard pages
+│   ├── components/         # Global reusable React components
+│   │   ├── shared/         # Shared UI elements (Navbars, Footers)
+│   │   └── ui/             # Shadcn UI primitives
+│   ├── config/             # Site configuration and navigation constants
+│   ├── features/           # Feature-based modules (Domain-driven)
+│   │   ├── dashboard/      # Dashboard feature components & data
+│   │   └── landing/        # Landing page feature components & data
+│   ├── layouts/            # Reusable layout wrappers
+│   ├── lib/                # Utility functions and helpers
+│   ├── providers/          # Global context providers (Theme, Query, Redux)
+│   └── store/              # Redux store and slices
+├── .github/
+│   └── workflows/          # CI/CD GitHub Actions pipelines
+├── next.config.ts          # Next.js configuration
+├── postcss.config.mjs      # PostCSS configuration
+└── package.json            # Dependencies and scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💻 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+First, install dependencies:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm install
+```
 
-## Learn More
+Then, run the development server:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚢 CI/CD Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
----
+This project uses an automated CI/CD pipeline via GitHub Actions.
+- **CI**: Runs linting and builds the project on every push and on pull requests to `main` and `dev`.
+- **CD**: Automatically deploys the application to the production VPS via SSH when changes are merged into the `main` branch.
 
 ### Note: Next Steps for You:
 Before pushing these changes to GitHub, ensure you have set up the following secrets in **GitHub → Repo → Settings → Secrets and variables → Actions**:
