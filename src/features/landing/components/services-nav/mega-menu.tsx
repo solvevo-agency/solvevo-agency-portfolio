@@ -21,56 +21,57 @@ export function ServicesMegaMenu() {
             Services
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="flex w-[600px] flex-col overflow-hidden rounded-xl border bg-popover shadow-lg">
+            <div className="flex w-[700px] flex-col overflow-hidden rounded-2xl border border-border bg-popover shadow-2xl">
               {/* Core Services Grid */}
-              <div className="p-6">
-                <div className="mb-4 flex items-center justify-between">
-                  <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">
+              <div className="p-6 sm:p-8">
+                <div className="mb-6 flex items-center justify-between">
+                  <h3 className="text-xs font-bold text-muted-foreground uppercase tracking-widest">
                     Core Services
                   </h3>
                   <Link
                     href="/services"
-                    className="text-sm text-primary hover:underline flex items-center gap-1 group"
+                    className="text-xs font-semibold text-primary hover:text-primary/80 flex items-center gap-1 group transition-colors"
                   >
-                    View All <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    View All Services <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                
+                <div className="grid grid-cols-2 gap-x-6 gap-y-4">
                   {megaMenuServices.map((service) => (
                     <NavigationMenuLink 
                       key={service.title}
                       render={<Link href={service.href} />}
-                      className="group/item flex flex-col gap-2 rounded-lg p-3 transition-colors hover:bg-muted/50"
+                      className="group flex items-start gap-4 rounded-xl p-3 transition-all hover:bg-secondary/40"
                     >
-                      <div className="flex items-center gap-2">
-                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-secondary text-secondary-foreground group-hover/item:bg-primary group-hover/item:text-primary-foreground transition-colors">
-                          <service.icon className="h-4 w-4" />
-                        </div>
-                        <h4 className="text-sm font-semibold text-foreground">
+                      <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-secondary text-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-sm border border-border/50">
+                        <service.icon className="h-5 w-5" />
+                      </div>
+                      <div className="flex flex-col">
+                        <h4 className="text-sm font-bold text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
                           {service.title}
                         </h4>
+                        <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">
+                          {service.description}
+                        </p>
                       </div>
-                      <p className="text-xs text-muted-foreground line-clamp-2">
-                        {service.description}
-                      </p>
                     </NavigationMenuLink>
                   ))}
                 </div>
               </div>
 
               {/* Bottom Banner CTA */}
-              <div className="flex items-center justify-between bg-primary/10 p-6 border-t border-border">
-                <div>
-                  <h4 className="text-base font-bold text-foreground">
-                    Want to accelerate your software company?
+              <div className="flex items-center justify-between bg-secondary/30 p-6 sm:px-8 border-t border-border">
+                <div className="flex flex-col">
+                  <h4 className="text-sm font-bold text-foreground">
+                    Accelerate your software company
                   </h4>
-                  <p className="text-sm text-muted-foreground mt-1">
+                  <p className="text-xs text-muted-foreground mt-1">
                     Book a free discovery call with our tech experts.
                   </p>
                 </div>
                 <NavigationMenuLink 
                   render={<Link href="/#contact" />}
-                  className="inline-flex h-10 items-center justify-center rounded-lg bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 hover:-translate-y-0.5 transition-all"
+                  className="inline-flex h-9 items-center justify-center rounded-lg bg-primary px-5 text-xs font-bold text-primary-foreground shadow-sm hover:bg-primary/90 hover:-translate-y-0.5 transition-all"
                 >
                   Book a Call
                 </NavigationMenuLink>
