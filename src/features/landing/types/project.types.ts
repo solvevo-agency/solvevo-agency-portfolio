@@ -4,6 +4,7 @@ export interface Project {
   title: string
   description: string
   coverImage: string
+  category: string
   tags: string[]
   liveUrl: string
   featured: boolean
