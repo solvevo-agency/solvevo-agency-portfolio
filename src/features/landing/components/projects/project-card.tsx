@@ -5,83 +5,76 @@ import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import type { Project } from "../../types/project.types";
 
-export function ProjectCard({ project }: { project: Project }) {
+export function ProjectCard({ project, isLarge = false }: { project: Project, isLarge?: boolean }) {
   return (
     <motion.a
       href={project.liveUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative block aspect-[4/5] overflow-hidden rounded-[2rem] border border-white/5 bg-[#050505] shadow-2xl cursor-pointer"
+      className={`group relative flex flex-col overflow-hidden rounded-[2rem] bg-card border border-border shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer ${isLarge ? 'md:flex-row' : ''}`}
       initial="rest"
       whileHover="hover"
       animate="rest"
     >
-      {/* Background Image */}
-      <Image
-        src={project.coverImage}
-        alt={project.title}
-        fill
-        className="object-cover transition-transform duration-700 group-hover:scale-105"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      />
-
-      {/* Persistent Bottom Gradient for Readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80" />
-
-      {/* Hover Deepen Gradient */}
-      <motion.div
-        variants={{ rest: { opacity: 0 }, hover: { opacity: 1 } }}
-        transition={{ duration: 0.4 }}
-        className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"
-      />
+      {/* Image Container */}
+      <div className={`relative overflow-hidden ${isLarge ? 'md:w-3/5 aspect-[4/3] md:aspect-auto' : 'aspect-[4/3] w-full'}`}>
+        <Image
+          src={project.coverImage}
+          alt={project.title}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          sizes={isLarge ? "(max-width: 768px) 100vw, 60vw" : "(max-width: 768px) 100vw, 50vw"}
+        />
+        {/* Subtle overlay */}
+        <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-500" />
+      </div>
 
       {/* Content Area */}
-      <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
-        
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 mb-4 relative z-10">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-[9px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white/90 shadow-sm"
-            >
-              {tag}
+      <div className={`flex flex-col justify-between p-8 md:p-10 lg:p-12 ${isLarge ? 'md:w-2/5' : 'w-full'} bg-card relative z-10`}>
+        <div>
+          {/* Tags / Category */}
+          <div className="flex flex-wrap items-center gap-3 mb-6">
+            <span className="text-xs font-bold uppercase tracking-wider text-primary">
+              {project.category}
             </span>
-          ))}
-        </div>
+            <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground/30"></span>
+            <div className="flex flex-wrap gap-2">
+              {project.tags.slice(0, 2).map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[11px] font-semibold text-muted-foreground bg-secondary/80 px-2.5 py-1 rounded-md"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
 
-        {/* Title & Description */}
-        <div className="relative z-10 transform transition-transform duration-500 group-hover:-translate-y-2">
-          <h3 className="text-2xl font-extrabold tracking-tight text-white mb-2">
+          {/* Title & Description */}
+          <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-card-foreground mb-4 group-hover:text-primary transition-colors duration-300">
             {project.title}
           </h3>
-          
-          <motion.div
-            variants={{
-              rest: { opacity: 0, height: 0, marginTop: 0 },
-              hover: { opacity: 1, height: "auto", marginTop: 12 },
-            }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden"
-          >
-            <p className="text-sm text-white/70 leading-relaxed line-clamp-3">
-              {project.description}
-            </p>
-          </motion.div>
+          <p className="text-base text-muted-foreground leading-relaxed line-clamp-3">
+            {project.description}
+          </p>
         </div>
 
-        {/* Live Site Icon / Button */}
-        <motion.div 
-          variants={{
-            rest: { scale: 0.8, opacity: 0 },
-            hover: { scale: 1, opacity: 1 }
-          }}
-          transition={{ duration: 0.3 }}
-          className="absolute top-6 right-6 w-12 h-12 bg-white text-black rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-transform hover:scale-110"
-        >
-          <ArrowUpRight className="w-6 h-6" />
-        </motion.div>
-
+        {/* Interactive Button */}
+        <div className="mt-8 flex items-center justify-between">
+          <span className="text-sm font-bold text-foreground group-hover:text-primary transition-colors">
+            View Project
+          </span>
+          <motion.div
+            variants={{
+              rest: { x: 0, y: 0 },
+              hover: { x: 4, y: -4 }
+            }}
+            transition={{ duration: 0.3 }}
+            className="w-11 h-11 rounded-full bg-secondary flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300"
+          >
+            <ArrowUpRight className="w-5 h-5" />
+          </motion.div>
+        </div>
       </div>
     </motion.a>
   );

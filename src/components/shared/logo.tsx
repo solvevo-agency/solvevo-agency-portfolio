@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import solvevo from "../../../public/images/solvevo.jpg";
+import solvevo from "../../../public/images/solvevo.png";
 
 export function Logo() {
   return (
@@ -8,7 +8,7 @@ export function Logo() {
       href="/"
       className="flex items-center font-sans text-2xl font-bold tracking-tight"
     >
-      <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg mt-1">
+      <div className="flex h-10 w-10 items-center justify-center overflow-hidden mt-1">
         <Image
           src={solvevo}
           alt="Solvevo Logo"
